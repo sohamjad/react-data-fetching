@@ -4,13 +4,13 @@ import { Column } from 'primereact/column';
 import { Checkbox } from 'primereact/checkbox';
 import { OverlayPanel } from 'primereact/overlaypanel';
 import { Button } from 'primereact/button';
-import { fetchArtworks } from './api';
-import type { Artwork } from './api';
+import { fetchArtworks, type Artwork } from './api'; // ✅ Correct import
 import { SelectionProvider, useSelection } from './SelectionContext';
 
 import 'primereact/resources/themes/lara-light-indigo/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
+
 
 function ArtTable() {
   const [artworks, setArtworks] = useState<Artwork[]>([]);
