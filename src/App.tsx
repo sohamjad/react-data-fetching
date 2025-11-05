@@ -36,8 +36,9 @@ function ArtTable() {
         setLoading(false);
 
         const selectedHere = res.data
-          .filter(a => selection.selectedIds.has(a.id))
-          .map(a => a.id);
+  .filter((a: Artwork) => selection.selectedIds.has(a.id))
+  .map((a: Artwork) => a.id);
+
         setSelectedIdsOnPage(selectedHere);
       })
       .catch(() => setLoading(false));
