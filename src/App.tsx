@@ -133,7 +133,7 @@ function ArtTable() {
         totalRecords={totalRecords || 10000}
         first={(page - 1) * rowsPerPage}
         onPage={(e) => {
-          const newPage = e.page + 1;
+          const newPage = (e?.page ?? 0) + 1;
           console.log("Page clicked:", newPage);
           setPage(newPage);
         }}
